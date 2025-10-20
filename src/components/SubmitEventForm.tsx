@@ -118,6 +118,32 @@ export function SubmitEventForm({ onSuccess }: SubmitEventFormProps) {
       )}
 
       <form onSubmit={handleSubmit} style={{ marginTop: '16px' }}>
+        {/* Contact Info - Side by Side - MOVED TO TOP */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '12px' }}>
+          <div>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Your Name</label>
+            <input
+              type="text"
+              name="contactName"
+              value={formData.contactName}
+              onChange={handleChange}
+              style={{ width: '100%', padding: '6px 8px', fontSize: '14px', border: '1px solid #d1d5db', borderRadius: '6px' }}
+              placeholder="Name"
+            />
+          </div>
+          <div>
+            <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              style={{ width: '100%', padding: '6px 8px', fontSize: '14px', border: '1px solid #d1d5db', borderRadius: '6px' }}
+              placeholder="email@example.com"
+            />
+          </div>
+        </div>
+
         {/* Venue and Band - Side by Side */}
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '12px' }}>
           <div>
@@ -164,32 +190,6 @@ export function SubmitEventForm({ onSuccess }: SubmitEventFormProps) {
               value={formData.time}
               onChange={handleChange}
               style={{ width: '100%', padding: '6px 8px', fontSize: '14px', border: '1px solid #d1d5db', borderRadius: '6px' }}
-            />
-          </div>
-        </div>
-
-        {/* Contact Info - Side by Side */}
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px', marginBottom: '12px' }}>
-          <div>
-            <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Your Name</label>
-            <input
-              type="text"
-              name="contactName"
-              value={formData.contactName}
-              onChange={handleChange}
-              style={{ width: '100%', padding: '6px 8px', fontSize: '14px', border: '1px solid #d1d5db', borderRadius: '6px' }}
-              placeholder="Name"
-            />
-          </div>
-          <div>
-            <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              style={{ width: '100%', padding: '6px 8px', fontSize: '14px', border: '1px solid #d1d5db', borderRadius: '6px' }}
-              placeholder="email@example.com"
             />
           </div>
         </div>
