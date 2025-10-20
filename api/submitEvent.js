@@ -45,10 +45,10 @@ export default async function handler(req, res) {
     } = req.body;
 
     // Validate required fields
-    if (!bandName || !venueName || !venueCity || !date || !time) {
+    if (!bandName || !venueName || !date || !time) {
       return res.status(400).json({
         error: 'Missing required fields',
-        required: ['bandName', 'venueName', 'venueCity', 'date', 'time']
+        required: ['bandName', 'venueName', 'date', 'time']
       });
     }
 
