@@ -134,7 +134,7 @@ export function SubmitEventForm({ onSuccess }: SubmitEventFormProps) {
           <div>
             <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Email</label>
             <input
-              type="email"
+              type="text"
               name="email"
               value={formData.email}
               onChange={handleChange}
@@ -175,21 +175,23 @@ export function SubmitEventForm({ onSuccess }: SubmitEventFormProps) {
           <div>
             <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Date</label>
             <input
-              type="date"
+              type="text"
               name="date"
               value={formData.date}
               onChange={handleChange}
               style={{ width: '100%', padding: '6px 8px', fontSize: '14px', border: '1px solid #d1d5db', borderRadius: '6px' }}
+              placeholder="MM/DD/YYYY"
             />
           </div>
           <div>
             <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Time</label>
             <input
-              type="time"
+              type="text"
               name="time"
               value={formData.time}
               onChange={handleChange}
               style={{ width: '100%', padding: '6px 8px', fontSize: '14px', border: '1px solid #d1d5db', borderRadius: '6px' }}
+              placeholder="7:00 PM"
             />
           </div>
         </div>
@@ -198,7 +200,7 @@ export function SubmitEventForm({ onSuccess }: SubmitEventFormProps) {
         <div style={{ marginBottom: '16px' }}>
           <label style={{ display: 'block', fontSize: '12px', fontWeight: '500', marginBottom: '4px' }}>Event URL (optional)</label>
           <input
-            type="url"
+            type="text"
             name="url"
             value={formData.url}
             onChange={handleChange}
